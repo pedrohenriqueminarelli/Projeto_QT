@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FrmEmpregado</class>
+ <widget class="QMainWindow" name="FrmEmpregado">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>634</width>
+    <height>763</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cadastro de Empregados </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="abas">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>9</y>
+      <width>331</width>
+      <height>677</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tabCadastro">
+     <attribute name="icon">
+      <iconset>
+       <selectedon>:/depto/botoes/about.bmp</selectedon>
+      </iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Cadastro</string>
+     </attribute>
+     <attribute name="toolTip">
+      <string>Manutenção de registros de departamento</string>
+     </attribute>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>CPF:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="edCpf">
+        <property name="maxLength">
+         <number>9</number>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="2">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Prenome:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="edPreNome"/>
+      </item>
+      <item row="6" column="0" colspan="2">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Inicial do meio:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="1">
+       <widget class="QLineEdit" name="edInicialMeio">
+        <property name="maxLength">
+         <number>1</number>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0" colspan="2">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Sobrenome:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="1">
+       <widget class="QLineEdit" name="edSobrenome"/>
+      </item>
+      <item row="14" column="0" colspan="2">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Departamento:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="16" column="1">
+       <widget class="QComboBox" name="cbDepto"/>
+      </item>
+      <item row="18" column="0" colspan="2">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Data de nascimento:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="21" column="1">
+       <widget class="QDateEdit" name="deDataNasc">
+        <property name="displayFormat">
+         <string>dd/mm/yyyy</string>
+        </property>
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="35" column="0" colspan="2">
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string>CPF do supervisor:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="38" column="1">
+       <widget class="QLineEdit" name="edSupervisorCpf">
+        <property name="maxLength">
+         <number>9</number>
+        </property>
+       </widget>
+      </item>
+      <item row="22" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>Salário:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="23" column="1">
+       <widget class="QDoubleSpinBox" name="dsbSalario">
+        <property name="maximum">
+         <double>999999.989999999990687</double>
+        </property>
+       </widget>
+      </item>
+      <item row="24" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>Endereço:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="26" column="1">
+       <widget class="QLineEdit" name="edEndereco"/>
+      </item>
+      <item row="30" column="1">
+       <widget class="QComboBox" name="cbSexo">
+        <item>
+         <property name="text">
+          <string>M</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>F</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="28" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>Sexo:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tabListagem">
+     <attribute name="icon">
+      <iconset>
+       <selectedon>:/depto/botoes/WINNEXT.BMP</selectedon>
+      </iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Listagem</string>
+     </attribute>
+     <attribute name="toolTip">
+      <string>Lista todos os registros de departamento</string>
+     </attribute>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QTableWidget" name="tblEmpregado">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <column>
+         <property name="text">
+          <string>CPF</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Nome</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Data Nasc</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Endereço</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Sexo</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Salário</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Departamento</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Gerente</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Supervisor</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>634</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCadastro">
+    <property name="title">
+     <string>Cadastro</string>
+    </property>
+    <widget class="QMenu" name="menuConex_o">
+     <property name="title">
+      <string>Conexão</string>
+     </property>
+     <widget class="QMenu" name="menuSQL_Server">
+      <property name="title">
+       <string>SQL Server</string>
+      </property>
+      <addaction name="actionDesktop"/>
+      <addaction name="actionServidor"/>
+     </widget>
+     <addaction name="menuSQL_Server"/>
+     <addaction name="actionMySQL"/>
+     <addaction name="actionOracle"/>
+    </widget>
+    <addaction name="menuConex_o"/>
+    <addaction name="separator"/>
+    <addaction name="actionSair"/>
+   </widget>
+   <widget class="QMenu" name="menuListagem">
+    <property name="title">
+     <string>Listagem</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuSair">
+    <property name="title">
+     <string>Sair</string>
+    </property>
+   </widget>
+   <addaction name="menuCadastro"/>
+   <addaction name="menuListagem"/>
+   <addaction name="menuSair"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="acao_Inicio"/>
+   <addaction name="acao_Anterior"/>
+   <addaction name="acao_Proximo"/>
+   <addaction name="acao_Fim"/>
+   <addaction name="separator"/>
+   <addaction name="acao_Buscar"/>
+   <addaction name="separator"/>
+   <addaction name="acao_Novo"/>
+   <addaction name="acao_Editar"/>
+   <addaction name="acao_Cancelar"/>
+   <addaction name="acao_Salvar"/>
+   <addaction name="separator"/>
+   <addaction name="acao_Excluir"/>
+   <addaction name="separator"/>
+   <addaction name="acao_Sair"/>
+  </widget>
+  <action name="actionSair">
+   <property name="text">
+    <string>Sair</string>
+   </property>
+  </action>
+  <action name="actionOracle">
+   <property name="text">
+    <string>Oracle</string>
+   </property>
+  </action>
+  <action name="actionMySQL">
+   <property name="text">
+    <string>MySQL</string>
+   </property>
+  </action>
+  <action name="actionDesktop">
+   <property name="text">
+    <string>Desktop</string>
+   </property>
+  </action>
+  <action name="actionServidor">
+   <property name="text">
+    <string>Servidor</string>
+   </property>
+  </action>
+  <action name="acao_Inicio">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/depto/botoes/first.bmp</normaloff>:/depto/botoes/first.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Início</string>
+   </property>
+   <property name="toolTip">
+    <string>Exibe o primeiro registro</string>
+   </property>
+  </action>
+  <action name="acao_Anterior">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/depto/botoes/prior.bmp</normaloff>:/depto/botoes/prior.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Anterior</string>
+   </property>
+   <property name="toolTip">
+    <string>Exibe o registro anterior ao atual</string>
+   </property>
+  </action>
+  <action name="acao_Proximo">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/depto/botoes/next.bmp</normaloff>:/depto/botoes/next.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Próximo</string>
+   </property>
+   <property name="toolTip">
+    <string>Exibe o registro seguinte ao atual</string>
+   </property>
+  </action>
+  <action name="acao_Fim">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/depto/botoes/last.bmp</normaloff>:/depto/botoes/last.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Fim</string>
+   </property>
+   <property name="toolTip">
+    <string>Exibe o último registro</string>
+   </property>
+  </action>
+  <action name="acao_Buscar">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/depto/botoes/Oeil2.bmp</normaloff>:/depto/botoes/Oeil2.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Buscar</string>
+   </property>
+   <property name="toolTip">
+    <string>Busca o departamento do número informado</string>
+   </property>
+  </action>
+  <action name="acao_Novo">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/depto/botoes/Add.bmp</normaloff>:/depto/botoes/Add.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Novo</string>
+   </property>
+   <property name="toolTip">
+    <string>Inicia a inclusão de um novo registro</string>
+   </property>
+  </action>
+  <action name="acao_Editar">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/depto/botoes/COPY.BMP</normaloff>:/depto/botoes/COPY.BMP</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Editar</string>
+   </property>
+   <property name="toolTip">
+    <string>Inicia a alteração do registro atual</string>
+   </property>
+  </action>
+  <action name="acao_Salvar">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/depto/botoes/Save.bmp</normaloff>:/depto/botoes/Save.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Salvar</string>
+   </property>
+   <property name="toolTip">
+    <string>Salva o registro incluído ou alterado</string>
+   </property>
+  </action>
+  <action name="acao_Excluir">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/depto/botoes/Minus.bmp</normaloff>:/depto/botoes/Minus.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>E&amp;xcluir</string>
+   </property>
+   <property name="toolTip">
+    <string>Exclui o registro atual</string>
+   </property>
+  </action>
+  <action name="acao_Sair">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/depto/botoes/CLOSE1.BMP</normaloff>:/depto/botoes/CLOSE1.BMP</iconset>
+   </property>
+   <property name="text">
+    <string>Sair</string>
+   </property>
+   <property name="toolTip">
+    <string>Fecha o formulário e termina o programa</string>
+   </property>
+  </action>
+  <action name="acao_Cancelar">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/depto/botoes/UNDO.BMP</normaloff>:/depto/botoes/UNDO.BMP</iconset>
+   </property>
+   <property name="text">
+    <string>Cancelar</string>
+   </property>
+   <property name="toolTip">
+    <string>Cancela a operação atual e retorna à navegação</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="recursos.qrc"/>
+ </resources>
+ <connections/>
+</ui>
