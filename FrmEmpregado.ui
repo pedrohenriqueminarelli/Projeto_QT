@@ -33,7 +33,7 @@
      <cursorShape>ArrowCursor</cursorShape>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tabCadastro">
      <attribute name="icon">
@@ -116,7 +116,7 @@
       <item row="21" column="1">
        <widget class="QDateEdit" name="deDataNasc">
         <property name="displayFormat">
-         <string>dd/mm/yyyy</string>
+         <string>dd/MM/yyyy</string>
         </property>
         <property name="calendarPopup">
          <bool>true</bool>
